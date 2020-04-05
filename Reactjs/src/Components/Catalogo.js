@@ -5,7 +5,7 @@ import emailjs from 'emailjs-com';
 //import Pedidos from './pedidos.js';
 import datas from './data.js';
 import {HomeFilled,ReadFilled, PhoneFilled, GoldenFilled, WechatOutlined} from '@ant-design/icons';
-const clasbutton={background: "rgb(251, 181, 125)",color:"white",width:"100%",height:"50%",};
+const clasbutton={background: "rgb(251, 181, 125)",color:"white",width:"100%",height:"100%",};
 const clasModal={width:"400%",height:"400%",};
 
 const { Option } = Select;
