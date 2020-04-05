@@ -143,6 +143,6 @@ export default class TablaCatalogo extends React.Component {
       },
    
     ];
-    return <Table  columns={columns} dataSource={datas} />;
+    return <Table rowSelection={rowSelection} columns={columns} dataSource={datas} />;
   }
 }
