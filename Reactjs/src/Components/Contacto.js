@@ -50,7 +50,7 @@ const icon=(<WechatOutlined/>);
         <Drawer
           title="Comentarios y Sugerencias"
           width={520}
-          closable={false}
+          closable={true}
           onClose={this.onClose}
           visible={this.state.visible}
         >
