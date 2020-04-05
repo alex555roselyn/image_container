@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input, InputNumber, Button } from 'antd';
+import emailjs from 'emailjs-com';
 
 const layout = {
   labelCol: { span: 8 },
@@ -17,10 +18,35 @@ const validateMessages = {
   },
 };
 
+
+var service_id = "default_service";
+var template_id = "template_DdfYlqAX";
+
+
+
+
+
+
 const Forms = () => {
   const onFinish = values => {
     console.log(values);
+
+  console.log(values.user.name);
+
+
+  var template_params = {
+   "reply_to": values.user.email,
+   "from_name": values.user.name,
+   "to_name": "Alejandro Corado",
+   "message_html": values.user.introduction+"<br/> Contactame al: "+values.user.phone+"<br/> Via APP_WEB",
+
+}
+
+emailjs.send(service_id, template_id,template_params,"user_FVsQlsnsbkITOs0yGLILA");
+
   };
+
+ 
 
   return (
     <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
@@ -30,7 +56,11 @@ const Forms = () => {
       <Form.Item name={['user', 'email']} label="Email" rules={[{ type: 'email' }]}>
         <Input />
       </Form.Item>
-      <Form.Item name={['user', 'age']} label="Age" rules={[{ type: 'number', min: 0, max: 99 }]}>
+  <Form.Item name={['user', 'phone']} label="Phone" rules={[{  max: 8 }]}>
+        <Input />
+ </Form.Item>
+
+      <Form.Item name={['user', 'age']} label="Edad" rules={[{ type: 'number', min: 0, max: 99 }]}>
         <InputNumber />
       </Form.Item>
       <Form.Item name={['user', 'website']} label="Website">
