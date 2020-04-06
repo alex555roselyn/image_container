@@ -1,13 +1,16 @@
 import React from 'react';
 import { Steps ,Button} from 'antd';
 import { UserOutlined, SolutionOutlined, LoadingOutlined, SmileOutlined } from '@ant-design/icons';
-import logo from './logo.png';
+import logotip from './logotip.png';
 import Cls from './Header.js';
 import Contactme from './Contacto.js';
 import Catalogo from './Catalogo.js';
 import Organigrama from './Organigrama.js';
 import {HomeFilled,ReadFilled, PhoneFilled, GoldenFilled, WechatOutlined} from '@ant-design/icons';
 import { Layout, Menu, Breadcrumb } from 'antd';
+import Mapa from './Mapa.js';
+import Carrousel from './Carrousel.js';
+import Acerca from './Acerca.js';
 const { Header, Content, Footer } = Layout;
 const { Step } = Steps;
 
@@ -39,9 +42,9 @@ render(){
         <Menu.Item key="1">
 <div style={{ left: 10 }}>
   <img 
-    src={logo} 
-    height={logo} 
-    width={logo} 
+    src={logotip} 
+    height={80} 
+    width={200} 
 
     />
 &nbsp; Inicio &nbsp;
@@ -56,14 +59,12 @@ render(){
         <Organigrama/>
         </Menu.Item>
 			<Menu.Item key="4"><Contactme/></Menu.Item>
-
-
-
-
-      </Menu>
-
-      	
-		</div>
+      </Menu>      	
+		</div>	
+		<div><Mapa/><Acerca/></div>
+		
+	
+		<Carrousel/>
 		</>
 		);
 }
