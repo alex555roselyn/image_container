@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table, Input, Button } from 'antd';
 import Highlighter from 'react-highlight-words';
-import { SearchOutlined } from '@ant-design/icons';
+import { SearchOutlined,PushpinFilled } from '@ant-design/icons';
 import datas from './data.js';
 
 
@@ -22,32 +22,6 @@ function function_name() {
 }
 
 */
-const data = [
-  {
-    key: '1',
-    name: 'Detergente Abrillantador',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-  },
-  {
-    key: '2',
-    name: 'Detergente Liquido',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-  },
-  {
-    key: '3',
-    name: 'Jabon en Polvo',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-  },
-  {
-    key: '4',
-    name: 'Jabon Liquido',
-    age: 32,
-    address: 'London No. 2 Lake Park',
-  },
-];
 
 export default class TablaCatalogo extends React.Component {
   state = {
