@@ -4,9 +4,22 @@ import TablaCatalogo from './TablaCatalogo.js';
 import emailjs from 'emailjs-com';
 //import Pedidos from './pedidos.js';
 import datas from './data.js';
+import { Form, InputNumber} from 'antd';
 import {HomeFilled,ReadFilled, PhoneFilled, GoldenFilled, WechatOutlined} from '@ant-design/icons';
 const clasbutton={background: "rgb(251, 181, 125)",color:"white",width:"100%",height:"100%",};
 const clasModal={width:"400%",height:"400%",};
+
+
+const validateMessages = {
+  required: '${label} es obligatorio!',
+  types: {
+    email: '${label} introduzca un correo electrónico valido!',
+  },
+  number: {
+    range: '${label} debe ser entre ${min} y ${max}',
+  },
+};
+
 
 
 
@@ -74,6 +87,7 @@ constructor(props) {
   this.next = this.next.bind(this);
   this.sendpedido=this.sendpedido.bind(this);
   this.closep=this.closep.bind(this);
+   this.closep1=this.closep1.bind(this);
   this.confir=this.confirm.bind(this);
 }
 
@@ -173,6 +187,19 @@ window.location.reload();
 
 
 
+async closep1()
+{
+
+
+  this.setState({
+        modal4Visible: false
+      });
+
+}
+
+
+
+
   async setModal1Visible(modal1Visible) {
     this.setState({ modal1Visible });
   }
@@ -222,6 +249,11 @@ console.log(nombre,telefono,correo,direccion);
 if(!correo=="")
 {
 
+if(!direccion=="")
+{
+  
+
+
  this.setState({
         modal3Visible: false,
       });
@@ -254,6 +286,11 @@ console.log(body);
 
 emailjs.send(service_id, template_id,template_params,"user_FVsQlsnsbkITOs0yGLILA");
 }
+else{
+  message.warning("Ingrese una dirección valida.")
+}
+}
+
 else{
 
 
@@ -289,7 +326,7 @@ else{
           center
           visible={this.state.modal4Visible}
           onOk={this.sendpedido}
-          onCancel={this.closep}
+          onCancel={this.closep1}
         >  
 
 <div>
@@ -407,18 +444,21 @@ Al hacer click en 'OK' usted esta de acuerdo con nuestras politicas y condicione
           onCancel={this.closep}
         >  
 
-        
-<Input type="telefono" id="nombre" placeholder="Introdusca su Nombre y Apellido"/>
-<Input type="text" id="correo" placeholder="Introdusca su Dirección de Correo Electrónico"/>
-<Input type="telefono" id="telefono" placeholder="Introdusca su Numero Telefonico"/>
-<Input type="telefono" id="direccion" placeholder="Introdusca su Dirección"/>
+ 
+<Input type="telefono" id="nombre" placeholder="Introduzca su Nombre y Apellido" />
+
+<Input type="text" id="correo" placeholder="Introduzca su Dirección de Correo Electrónico" />
+
+<Input type="number" id="telefono" placeholder="Introduzca su Número Telefónico" required/>
+
+<Input type="text" id="direccion" placeholder="Introduzca su Dirección" required/>
+
 <label>Total: Q.{sumatoria}</label>      
  <Table columns={columnas} dataSource={pushed} pagination={{ pageSize: 50 }} scroll={{ y: 240 }} />
 
-
         </Modal> 
 
-  
+ 
 
 
 

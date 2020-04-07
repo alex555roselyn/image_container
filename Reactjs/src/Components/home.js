@@ -30,26 +30,31 @@ render(){
 	return(
 		<>
 		<div className="nav navbar" style={labuser}>
+<div style={{marginLeft : "20px", padding: 7}}>
+ <img 
+    src={logotip} 
+    height={100} 
+    width={210} 
 
+    />
+</div>
 
       <Menu theme="dark" style={labuser} mode="horizontal" >
-        <Menu.Item key="logo">  <div className="logo" />
+        <Menu.Item key="logo"> 
+
+         <div className="logo">
+         <div style={{ left: 10 }}>
+ 
+  Inicio&nbsp;<HomeFilled/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+  </div>
+         </div>
 
     
    
     </Menu.Item>
 
         <Menu.Item key="1">
-<div style={{ left: 10 }}>
-  <img 
-    src={logotip} 
-    height={80} 
-    width={200} 
-
-    />
-&nbsp; Inicio &nbsp;
-  <HomeFilled/>
-  </div>
+	Menú >
         </Menu.Item>
 
         <Menu.Item key="5"><Catalogo/></Menu.Item>

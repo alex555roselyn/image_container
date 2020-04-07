@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, InputNumber, Button } from 'antd';
+import { Form, Input, InputNumber, Button, message } from 'antd';
 import emailjs from 'emailjs-com';
 
 const layout = {
@@ -37,36 +37,42 @@ const Forms = () => {
   var template_params = {
    "reply_to": values.user.email,
    "from_name": values.user.name,
-   "to_name": "Alejandro Corado",
+   "to_name": "Alejandro Corado-Spring Cleaning",
    "message_html": values.user.introduction+"<br/> Contactame al: "+values.user.phone+"<br/> Via APP_WEB",
 
 }
 
 emailjs.send(service_id, template_id,template_params,"user_FVsQlsnsbkITOs0yGLILA");
 
+ message.loading({ content: 'Enviando...', key, duration: 10 });
+setTimeout(() => {
+
+message.success({ content: 'Mensaje enviado exitosamente.!', key, duration: 2 });
+
+  window.location.reload();
+}, 4000);
+
+
   };
 
- 
+ const key = 'updatable';
 
   return (
     <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
-      <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
+      <Form.Item name={['user', 'name']} label="Nombre" rules={[{ required: true }]}>
         <Input />
       </Form.Item>
-      <Form.Item name={['user', 'email']} label="Email" rules={[{ type: 'email' }]}>
+      <Form.Item name={['user', 'email']} label="Correo" rules={[{ type: 'email' }]}>
         <Input />
       </Form.Item>
-  <Form.Item name={['user', 'phone']} label="Phone" rules={[{  max: 8 }]}>
+  <Form.Item name={['user', 'phone']} label="Teléfono" rules={[{  max: 8 }]}>
         <Input />
  </Form.Item>
 
       <Form.Item name={['user', 'age']} label="Edad" rules={[{ type: 'number', min: 0, max: 99 }]}>
         <InputNumber />
       </Form.Item>
-      <Form.Item name={['user', 'website']} label="Website">
-        <Input />
-      </Form.Item>
-      <Form.Item name={['user', 'introduction']} label="Introduction">
+      <Form.Item name={['user', 'introduction']} label="Mensaje">
         <Input.TextArea />
       </Form.Item>
       <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>

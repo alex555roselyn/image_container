@@ -19,6 +19,15 @@ constructor(props) {
 
 }
 
+   /* style={{
+        display: 'flex',
+         marginLeft: "20px",
+         background: "gray",
+         width:'265px',
+         opacity:'0.4'
+         
+      }}
+*/
 
    modal1(modal1Visible){
     this.setState({ modal1Visible });
@@ -33,12 +42,13 @@ constructor(props) {
 
 		render(){
 			return( 
-				<div>
+				<>
+    
 
-			<h4 style={{
-				display: 'flex',
-				 marginLeft: "20px"
-			}}> ACERCA DE NOSOTROS	</h4>	
+			<div style={{ background: "white", color: 'red', opacity:'0.4',borderRadius: '9px'}} > 
+      <h4 style={{ display: 'flex', marginLeft: "10vh", color: 'red'}}>ACERCA DE NOSOTROS</h4>
+
+      </div>	
 
 
 		<Modal
@@ -90,30 +100,30 @@ constructor(props) {
           onCancel={() => this.modal3(false)}
         >  
 
-					<div style={{display: "flex"}}>
 						
         				
         				
-						<div>
+					
 							<img src={valoresImg}/>
-        				</div>
+        				
 
-					</div>
+			
         	</Modal>
 
 
-<p style={{ opacity: "0.5"}}><h3 style={{ display: "flex", marginLeft: "20px"}}>Misión</h3>
-<Button className="btn btn-outline-dark" style={{ display: "flex",  marginLeft: "20px" }} onClick={() => this.modal1(true)}>Ver mas...</Button> 
+<div style={{ opacity: "0.5"}}><h4 style={{ display: "flex", marginLeft: "10vh"}}>Misión</h4>
+<Button className="btn btn-outline-dark" style={{ display: "flex",  marginLeft: "10vh" }} onClick={() => this.modal1(true)}>Ver mas...</Button> 
 
-<h3 style={{ display: "flex", marginLeft: "20px"}}>Visión</h3>
-<Button className="btn btn-outline-dark"  style={{display: "flex",  marginLeft: "20px" }}  onClick={() => this.modal2(true)}>Ver mas...</Button>
+<h4 style={{ display: "flex", marginLeft: "10vh"}}>Visión</h4>
+<Button className="btn btn-outline-dark"  style={{display: "flex",  marginLeft: "10vh" }}  onClick={() => this.modal2(true)}>Ver mas...</Button>
 
-<h3 style={{ display: "flex", marginLeft: "20px"}}>Valores</h3>
-<Button  className="btn btn-outline-dark"  style={{display: "flex",  marginLeft: "20px" }} onClick={() => this.modal3(true)}>Ver mas...</Button>
-</p>
+<h4 style={{ display: "flex", marginLeft: "10vh"}}>Valores</h4>
+<Button  className="btn btn-outline-dark"  style={{display: "flex",  marginLeft: "10vh" }} onClick={() => this.modal3(true)}>Ver mas...</Button>
+</div>
+<br/>
 
 
-				</div>
+				</>
 			
 					)
 		}
