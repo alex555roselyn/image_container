@@ -2,8 +2,10 @@ import React from 'react'
 import misionImg from './mision.png'
 import visionImg from './vision.png'
 import valoresImg from './valoresE.png'
-import { Popconfirm,message,Input,Modal} from 'antd';
+import {Modal} from 'antd';
 import { Button } from 'react-bootstrap';
+import fa from './fa.webp';
+import tw from './tw.png';
 
 class Acerca extends React.Component {
 
@@ -18,16 +20,6 @@ constructor(props) {
   };
 
 }
-
-   /* style={{
-        display: 'flex',
-         marginLeft: "20px",
-         background: "gray",
-         width:'265px',
-         opacity:'0.4'
-         
-      }}
-*/
 
    modal1(modal1Visible){
     this.setState({ modal1Visible });
@@ -46,7 +38,28 @@ constructor(props) {
     
 
 			<div style={{ background: "white", color: 'red', opacity:'0.4',borderRadius: '9px'}} > 
-      <h4 style={{ display: 'flex', marginLeft: "10vh", color: 'red'}}>ACERCA DE NOSOTROS</h4>
+      <h4 style={{ display: 'flex', marginLeft: "10vh", color: 'red'}}>ACERCA DE NOSOTROS &nbsp;
+      <a
+          className="App-link"
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        > <img src={fa}
+
+                 height={40} 
+                 width={40}
+              /></a>  <a
+          className="App-link"
+          href="https://twitter.com/explore" target="_blank"
+          rel="noopener noreferrer"
+        >
+         <img src={tw}
+
+                 height={40} 
+                 width={40} 
+
+              /></a>
+              </h4>
 
       </div>	
 

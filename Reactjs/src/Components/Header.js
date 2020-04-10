@@ -1,8 +1,8 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu} from 'antd';
 import './Header.css';
 import logo from './logo.png';
-import { HomeFilled,UserOutlined, SolutionOutlined, LoadingOutlined, SmileOutlined } from '@ant-design/icons';
+import { HomeFilled} from '@ant-design/icons';
 const { Header, Content, Footer } = Layout;
 
 

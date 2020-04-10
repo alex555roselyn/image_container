@@ -8,10 +8,10 @@ const layout = {
 };
 
 const validateMessages = {
-  required: '${label} is required!',
+  required: '${label} es requerido!',
   types: {
-    email: '${label} is not validate email!',
-    number: '${label} is not a validate number!',
+    email: '${label} no es una dirección de correo valida!',
+    number: '${label} no es un número valido!',
   },
   number: {
     range: '${label} must be between ${min} and ${max}',

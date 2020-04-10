@@ -1,11 +1,9 @@
 import React from 'react';
-import { Popconfirm,message,Select,Input,Modal, Button, Table } from 'antd';
+import {message,Input,Modal, Button, Table } from 'antd';
 import TablaCatalogo from './TablaCatalogo.js';
 import emailjs from 'emailjs-com';
-//import Pedidos from './pedidos.js';
 import datas from './data.js';
-import { Form, InputNumber} from 'antd';
-import {HomeFilled,ReadFilled, PhoneFilled, GoldenFilled, WechatOutlined} from '@ant-design/icons';
+import {ReadFilled} from '@ant-design/icons';
 const clasbutton={background: "rgb(251, 181, 125)",color:"white",width:"100%",height:"100%",};
 const clasModal={width:"400%",height:"400%",};
 
@@ -333,7 +331,7 @@ else{
 Terminos y condiciones.
 <br/>
 
-<h7>
+<label>
 ¿Qué son los términos y condiciones de uso?
 <br/>
 Los términos y condiciones, también conocidos como condiciones de uso y contratación, son elementos que regulan la relación con el usuario respecto al acceso de los contenidos y de los servicios que se ponen a disposición a través de la página web. Dichas condiciones son redactadas unilateralmente por el empresario titular de la página web o tienda online sin posibilidad de que los usuarios tengan capacidad de negociación dado que se trata de contratos de adhesión.
@@ -372,11 +370,11 @@ Debe tenerse en cuenta que en el caso de venta de productos tendrán que incluir
 – Legislación aplicable y sistema de solución de conflictos: Resulta importante dar a conocer al usuario las normas que serán de aplicación a la relación contractual que se crea, así como establecer el sistema extrajudicial de solución de conflictos o los tribunales competentes para resolver las controversias que surjan.
 
 – Otros: En caso de que se realicen ofertas y promociones deben incluirse las condiciones específicas que regirán para esa oferta o promoción. Si se ofrece al usuario un servicio de atención al cliente después de realizada la adquisición del producto o servicio se deben incluir también las condiciones que regulen ese servicio post-venta.
-</h7>
+</label>
 <br/>
-<h8>
+<label>
 Al hacer click en 'OK' usted esta de acuerdo con nuestras politicas y condiciones. 
-</h8>
+</label>
 </div>
 
 

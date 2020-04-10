@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-import { SearchOutlined,PushpinFilled,ShopOutlined } from '@ant-design/icons';
+import {PushpinFilled,ShopOutlined } from '@ant-design/icons';
  
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
  

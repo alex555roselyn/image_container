@@ -8,7 +8,7 @@ import disenio from './disenio.jpg';
 import analista from './analista.jpg';
 import analistadoc from './analistadoc.jpg';
 //import mosaico from './mosaico.png';
-import {HomeFilled,ReadFilled, PhoneFilled, GoldenFilled, WechatOutlined} from '@ant-design/icons';
+import {GoldenFilled} from '@ant-design/icons';
 const clasbutton={background: "rgb(251, 181, 125)" ,color:"white",width:"100%",height:"100%",};
 export default class Organigrama extends React.Component {
 

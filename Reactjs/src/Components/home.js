@@ -1,6 +1,5 @@
 import React from 'react';
-import { Steps ,Button} from 'antd';
-import { UserOutlined, SolutionOutlined, LoadingOutlined, SmileOutlined } from '@ant-design/icons';
+import { Steps} from 'antd';
 import logotip from './logotip.png';
 import Cls from './Header.js';
 import Contactme from './Contacto.js';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Drawer, Button } from 'antd';
-import {HomeFilled,ReadFilled, PhoneFilled, GoldenFilled, WechatOutlined} from '@ant-design/icons';
+import {PhoneFilled,WechatOutlined} from '@ant-design/icons';
 import Forms from './Comentario.js';
 
 //import MessengerCustomerChat from 'react-messenger-customer-chat';
@@ -36,7 +36,6 @@ export default class Contacme extends React.Component {
 
   render() {
 const clasbutton={background: "rgb(251, 181, 125)",color:"white",width:"100%",height:"100%",};
-const clasbuttonchat={background: "rgb(251, 181, 125)" ,color:"white",width:"25%",height:"5%",};
 
 
 const icon=(<WechatOutlined/>);
@@ -55,7 +54,7 @@ const icon=(<WechatOutlined/>);
           visible={this.state.visible}
         >
          
-         <Button style={clasbuttonchat} onClick={this.showChildrenDrawer}>Chat {icon}</Button>
+        
         
             <Forms/>
      <div className="container">
@@ -70,16 +69,6 @@ const icon=(<WechatOutlined/>);
 
      </div>
 
-          <Drawer
-            title="Comentarios y Sugerencias"
-            width={420}
-            closable={false}
-            onClose={this.onChildrenDrawerClose}
-            visible={this.state.childrenDrawer}
-          >
-           holis
-          
-          </Drawer>
         </Drawer>
       </>
     );
